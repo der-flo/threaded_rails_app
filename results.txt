@@ -1,7 +1,7 @@
 (Immer median)
 
 rails s
-rails s Puma
+RBXOPT=-X19 rails s Puma
 
 ab -c 1 -n 100 http://localhost:3000/cpu
 ab -c 2 -n 100 http://localhost:3000/cpu
@@ -45,9 +45,21 @@ c=2 io  - Puma: 113
 
 c=4 cpu - Puma: 261
 
+
++ Rubinius 2.0.0.rc1
+--------------------
+c=1 cpu - Puma: 30
+c=1 io  - Puma: 107
+c=2 cpu - Puma: 37
+c=2 io  - Puma: 108
+
+c=4 cpu - Puma: 61
+
 ################################################################################
 1.9.3: 70 MB RAM
 JRuby: 210 MB RAM
+Rubinius: 117 MB RAM
+
 
 
 https://github.com/jruby/jruby/wiki/PerformanceTuning ggf. noch offen

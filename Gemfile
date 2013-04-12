@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-#gem 'mysql2'
-gem 'activerecord-jdbcmysql-adapter'
+#ruby "1.9.3", :engine => "rbx", :engine_version => "2.0.0.rc1"
+gem 'mysql2'
+#gem 'activerecord-jdbcmysql-adapter'
 
 gem 'jquery-rails'
 
@@ -17,5 +18,4 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-
-gem 'puma'
+gem 'puma', '~> 2.0.0.b7'
